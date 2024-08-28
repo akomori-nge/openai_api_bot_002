@@ -1,12 +1,12 @@
 
 import streamlit as st
-import OpenAI
+from openai import OpenAI
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 
 # clientの定義
-client = OpenAI(openai.api_key)
+client = OpenAI()
 
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
