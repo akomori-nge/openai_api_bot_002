@@ -6,7 +6,7 @@ import OpenAI
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 
 # clientの定義
-client = OpenAI()
+client = OpenAI(openai.api_key)
 
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
